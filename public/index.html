@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>HelpYeah</title>
+<meta name="description" content="Find a functional health practitioner who can actually help. Answer 5 quick questions and get matched with functional doctors, naturopaths, nutritionists and health coaches who can see you online in your state.">
+<meta name="theme-color" content="#fbf7f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121815" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://helpyeah.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://helpyeah.com/">
+<meta property="og:title" content="HelpYeah: find someone who can actually help">
+<meta property="og:description" content="5 quick questions. Matched with functional health practitioners who can see you online in your state. Free, no account.">
+<meta property="og:image" content="https://helpyeah.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="/" aria-label="HelpYeah home"><i aria-hidden="true">✓</i><b>Help<span>Yeah</span></b></a>
+    <a class="toplink" href="/join/">For practitioners</a>
+  </header>
+
+  <section class="hero" id="hero">
+    <span class="eyebrow">Functional health, finally findable</span>
+    <h1>Ready for someone who can actually help?</h1>
+    <p>Answer 5 quick questions. We'll match you with functional health practitioners who can see you online, in your state.</p>
+    <button class="yeah" id="start" type="button">Help, yeah <span aria-hidden="true">→</span></button>
+    <ul class="trust"><li>Free</li><li>No account</li><li>No medical records</li><li>About a minute</li></ul>
+  </section>
+
+  <section class="card quiz" id="quiz" hidden aria-live="polite">
+    <div class="qtop"><button class="back" id="back" type="button">← Back</button><div class="bar" aria-hidden="true"><i id="bar"></i></div><span class="qstep" id="qstep"></span></div>
+    <div id="qbody"></div>
+    <button class="next" id="next" type="button" disabled>Next</button>
+  </section>
+
+  <section class="results" id="results" hidden aria-live="polite"></section>
+
+  <section class="section" id="types">
+    <h2>Who's who in functional health</h2>
+    <p>Half the battle is knowing what kind of practitioner you need. Here's the plain-English version.</p>
+    <div class="types" id="typeCards"></div>
+  </section>
+
+  <section class="card section">
+    <h2>How it works</h2>
+    <ol class="steps3">
+      <li><div><b>Tell us what's going on</b><span>Five quick taps. No forms, no account, no medical history.</span></div></li>
+      <li><div><b>See your best matches</b><span>Practitioners who focus on what you're dealing with and can legally see you in your state.</span></div></li>
+      <li><div><b>Book directly with them</b><span>You go straight to their own booking page. HelpYeah never sits in the middle.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="pro">
+    <h2>Are you a functional health practitioner?</h2>
+    <p>Patients are looking for you. They just can't find you. Founding practitioners get listed free for a year.</p>
+    <a href="/join/">Get listed</a>
+  </section>
+
+  <footer>
+    <p>HelpYeah is a directory that helps you find practitioners. It isn't medical advice, and practitioners are independent. We check that listed practitioners hold the licenses they report, but please confirm details before booking.</p>
+    <p>If this is an emergency, call 911. If you're in crisis, call or text 988.</p>
+    <p>helpyeah.com</p>
+  </footer>
+</div>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

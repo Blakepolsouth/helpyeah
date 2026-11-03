@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Get listed · HelpYeah</title>
+<meta name="description" content="Functional health practitioners: get matched with patients who are looking for exactly what you do, in the states where you're licensed. Founding practitioners list free for a year.">
+<meta name="theme-color" content="#fbf7f0">
+<meta property="og:title" content="HelpYeah for practitioners: patients are looking for you">
+<meta property="og:description" content="Get matched with patients in the states where you're licensed. They book on your own site. Founding practitioners list free for a year.">
+<meta property="og:image" content="https://helpyeah.com/og.png">
+<link rel="canonical" href="https://helpyeah.com/join/">
+<link rel="icon" href="/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="/" aria-label="HelpYeah home"><i aria-hidden="true">✓</i><b>Help<span>Yeah</span></b></a>
+    <a class="toplink" href="/">For patients</a>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow">For functional health practitioners</span>
+    <h1>Patients are looking for you. They just can't find you.</h1>
+    <p>HelpYeah matches people with practitioners by what they're dealing with and where you're licensed to see them. They book on your own site. No new software, no per-patient fees.</p>
+  </section>
+
+  <section class="demand" id="demand" hidden></section>
+
+  <section class="card section">
+    <h2>Why list here</h2>
+    <ul class="perks">
+      <li><div><b>Free for your first year.</b> Founding practitioners pay nothing for 12 months.</div></li>
+      <li><div><b>Patients who fit.</b> We match on focus area, licensed states, budget and insurance, so the people who reach you are a good fit.</div></li>
+      <li><div><b>They book with you, not us.</b> Every match goes straight to your own booking page. You keep your process and your patients.</div></li>
+      <li><div><b>Plain-English profiles.</b> We explain what each kind of practitioner does, so patients show up knowing what to expect from you.</div></li>
+      <li><div><b>Verified listings only.</b> We check every license before a profile goes live, which keeps HelpYeah trustworthy for everyone on it.</div></li>
+    </ul>
+  </section>
+
+  <section class="card" id="formCard">
+    <form class="form" id="applyForm" novalidate>
+      <h2 style="font-size:26px">Apply to be listed</h2>
+      <p class="muted" style="margin:-10px 0 0">About 5 minutes. We review every application, usually within a few days.</p>
+
+      <label class="field"><span>Your name</span><input type="text" name="name" autocomplete="name" required></label>
+      <label class="field"><span>Credentials</span><input type="text" name="creds" placeholder="e.g. MD, ND, RD, CNS, NBC-HWC"><small>As you want them shown after your name.</small></label>
+      <div class="field"><span>What kind of practitioner are you?</span><div class="checks" id="typeChecks"></div></div>
+      <label class="field"><span>Practice name</span><input type="text" name="practice"></label>
+      <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required><small>Private. Only used to contact you about your listing.</small></label>
+      <label class="field"><span>Booking link</span><input type="url" name="booking" placeholder="https://" required><small>Where patients book or request a consult. This is where every match goes.</small></label>
+      <label class="field"><span>Website (optional)</span><input type="url" name="site" placeholder="https://"></label>
+      <label class="field"><span>Headshot link (optional)</span><input type="url" name="photo" placeholder="https://"><small>A link to a photo on your website. Profiles with a face get more bookings.</small></label>
+
+      <div class="field"><span>How do you see patients?</span>
+        <div class="checks"><label class="check"><input type="checkbox" name="online" checked> Online</label><label class="check"><input type="checkbox" name="inPerson"> In person</label></div></div>
+      <div class="field" id="statesField"><span>States where you can see patients online</span>
+        <small id="statesHint">Only states where you're licensed or legally allowed to practice. We match patients by this.</small>
+        <label class="check" id="anywhereWrap" hidden><input type="checkbox" name="anywhere"> Coaching clients anywhere in the US</label>
+        <div class="statesbox" id="statesBox"></div></div>
+      <div class="field" id="officeField" hidden><span>Office location</span>
+        <div style="display:grid;grid-template-columns:1fr 120px;gap:8px"><input type="text" name="city" placeholder="City"><select name="officeState" id="officeState"></select></div></div>
+      <label class="field" id="licField"><span>License numbers</span><textarea name="licenses" placeholder="e.g. FL ME123456, GA 078910" style="min-height:70px"></textarea><small>Private. We use these to verify your license with each state board before your profile goes live.</small></label>
+
+      <div class="field"><span>What do you focus on? (up to 5)</span><div class="checks" id="focusChecks"></div></div>
+      <label class="field"><span>Your approach, in a couple of sentences</span><textarea name="approach" maxlength="400" placeholder="Talk to patients like you would on a first call. What do you do differently?"></textarea><small><span id="apCount">0</span>/400</small></label>
+      <label class="field"><span>Training & certifications (optional)</span><input type="text" name="training" placeholder="e.g. IFM certified, IIN, FMCA"></label>
+
+      <div class="field"><span>First visit price</span><div class="checks" id="priceChecks"></div></div>
+      <div class="field"><span>Insurance</span><div class="checks" id="insChecks"></div></div>
+      <div class="field"><span>Extras</span><div class="checks"><label class="check"><input type="checkbox" name="freeIntro"> I offer a free intro call</label></div></div>
+      <label class="field"><span>How did you hear about HelpYeah? (optional)</span><input type="text" name="heard"></label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <p class="err" id="err" hidden></p>
+      <button class="next" type="submit" id="submitBtn">Send my application</button>
+      <p class="muted" style="font-size:13.5px;margin:0">By applying you confirm the information is accurate and that you hold the licenses you list. HelpYeah is a directory. You remain responsible for your own practice and patient care.</p>
+    </form>
+  </section>
+
+  <section class="ok" id="done" hidden>
+    <h2>Application received. Thank you!</h2>
+    <p>We'll verify your license and email you when your profile is live, usually within a few days. Know another great practitioner? Send them this page.</p>
+  </section>
+
+  <footer><p>Questions? Reply to any email from us. · helpyeah.com</p></footer>
+</div>
+<script type="module" src="/join/join.js"></script>
+</body>
+</html>
