@@ -17,3 +17,5 @@ No patient health records are stored. The quiz keeps only state, broad concern c
 
 ## Before charging practitioners
 Use a flat listing fee (like Psychology Today), not a per-patient fee, and have a healthcare attorney review it.
+
+Admin: https://helpyeah.com/admin/ (password = the ADMIN_KEY in Netlify)
